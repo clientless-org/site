@@ -1,0 +1,49 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const pageTitle = `${title} | Clientless`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href="/">
+            <span class="brand-mark" aria-hidden="true">C</span>
+            <span>Clientless</span>
+          </a>
+          <div class="nav-links">
+            <a href="/launch/">Launch</a>
+            <a href="/docs/">Docs</a>
+            <a href="/blog/">Blog</a>
+            <a href="/blog/rss.xml">RSS</a>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <div>
+          <span>Clientless is the backend-composed application model for MCP-era software.</span>
+          <span>Docs, essays, and launch narrative share one source of truth.</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

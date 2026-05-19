@@ -1,0 +1,50 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Home"
+  description="Clientless is a new application architecture for backend-composed, json-render streamed software."
+>
+  <section class="page hero gateway-hero">
+    <div>
+      <h1>Clientless</h1>
+      <p>
+        A new way to build software: compose the product on the backend,
+        stream the interface as data, and let every host render the same app
+        through a thin, standardized shell.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="/launch/">Read the launch page</a>
+        <a class="button secondary" href="/docs/">Open the docs</a>
+      </div>
+    </div>
+    <aside class="gateway-panel" aria-label="Site sections">
+      <h2>Start here</h2>
+      <div class="gateway-list">
+        <a href="/launch/">
+          <span class="route-chip" aria-hidden="true">01</span>
+          <span>
+            <strong>Launch</strong>
+            The high-level argument for Clientless as the next app platform.
+          </span>
+        </a>
+        <a href="/docs/">
+          <span class="route-chip blue" aria-hidden="true">02</span>
+          <span>
+            <strong>Docs</strong>
+            The canonical definitions, architecture, host model, and stack.
+          </span>
+        </a>
+        <a href="/blog/">
+          <span class="route-chip gold" aria-hidden="true">03</span>
+          <span>
+            <strong>Blog</strong>
+            Essays that expand the thesis without replacing the docs.
+          </span>
+        </a>
+      </div>
+    </aside>
+  </section>
+</Base>
+

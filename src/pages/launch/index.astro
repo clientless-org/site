@@ -1,0 +1,204 @@
+---
+import Base from "../../layouts/Base.astro";
+---
+
+<Base
+  title="Launch"
+  description="The Clientless launch page: backend-composed applications streamed through json-render to every host."
+>
+  <section class="page hero">
+    <div>
+      <h1>The app no longer has to live in the client.</h1>
+      <p>
+        Clientless moves composition to the backend. Product logic, data,
+        tools, AI generation, and workflow state produce json-render streams.
+        Hosts become small, standardized renderers.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="/docs/thesis/">Read the thesis</a>
+        <a class="button secondary" href="/blog/the-clientless-thesis/">Read the first essay</a>
+      </div>
+    </div>
+    <div class="diagram-panel" aria-label="Clientless summary diagram">
+      <div class="system-stack">
+        <div class="node">
+          <strong>Backend composition</strong>
+          <span>Any language, any service shape, any tools, one UI contract.</span>
+        </div>
+        <div class="stream">
+          <div class="stream-line"></div>
+          <span>json-render stream</span>
+        </div>
+        <div class="node host">
+          <strong>Every host</strong>
+          <span>OpenAI, Claude, WebHost, mobile, desktop, widgets, and more.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page section">
+    <h2>The new medium between frontend and backend is a stream.</h2>
+    <p>
+      Instead of shipping one large client application that owns routing,
+      rendering, data fetching, and workflow composition, the backend emits a
+      structured UI stream. The host renders that stream with the right
+      registry for the surface.
+    </p>
+    <div class="diagram-panel">
+      <div class="system-map">
+        <div class="system-stack">
+          <div class="node">
+            <strong>Data and state</strong>
+            <span>Databases, files, auth, sessions, queues, and domain models.</span>
+          </div>
+          <div class="node">
+            <strong>Tools and AI</strong>
+            <span>MCP tools, agents, model calls, search, and external services.</span>
+          </div>
+          <div class="node">
+            <strong>Product composer</strong>
+            <span>Monolith, services, workflows, or endpoint binaries.</span>
+          </div>
+        </div>
+        <div class="stream">
+          <div class="stream-line"></div>
+          <span>SpecStream</span>
+        </div>
+        <div class="host-grid">
+          <div class="node host">
+            <strong>Native MCP hosts</strong>
+            <span>Conversation and IDE hosts that render MCP Apps inline.</span>
+          </div>
+          <div class="node host">
+            <strong>WebHost</strong>
+            <span>A browser shell for non-native web delivery.</span>
+          </div>
+          <div class="node host alt">
+            <strong>Mobile shells</strong>
+            <span>iOS apps, widgets, and future React Native registries.</span>
+          </div>
+          <div class="node host alt">
+            <strong>Desktop shells</strong>
+            <span>macOS and Windows shells without app logic inside them.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page section">
+    <h2>The protocol stack becomes the product boundary.</h2>
+    <p>
+      Clientless does not eliminate frontend code. It changes where the product
+      is composed. React, Swift, native widgets, and web components can still
+      exist inside renderers and host shells, but the app contract is json.
+    </p>
+    <div class="diagram-panel">
+      <div class="stack-visual">
+        <div class="layer">
+          <b>Surface</b>
+          <span>Chat, browser, IDE, mobile widget, desktop panel, static site.</span>
+        </div>
+        <div class="layer">
+          <b>Host adapter</b>
+          <span>Native MCP Apps support, WebHost, or a thin platform shell.</span>
+        </div>
+        <div class="layer">
+          <b>Renderer registry</b>
+          <span>Maps the shared catalog to platform components and actions.</span>
+        </div>
+        <div class="layer">
+          <b>json-render</b>
+          <span>Specs, streams, state binding, validation, and progressive UI.</span>
+        </div>
+        <div class="layer">
+          <b>MCP Apps</b>
+          <span>Standard app resources, iframe bridge, and tool-call mediation.</span>
+        </div>
+        <div class="layer">
+          <b>Backend</b>
+          <span>Business logic, data, tools, AI, auth, and workflow composition.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page section">
+    <h2>One app model, many host categories.</h2>
+    <p>
+      Native MCP hosts can render the app directly. Non-native targets only
+      need a shell that understands the same contract. The shell should be
+      boring; the product stays upstream.
+    </p>
+    <div class="diagram-panel">
+      <div class="platform-matrix">
+        <div class="platform">
+          <small>Native</small>
+          <strong>OpenAI</strong>
+          <span>ChatGPT Apps SDK is built on MCP and is a primary host target.</span>
+        </div>
+        <div class="platform">
+          <small>Native</small>
+          <strong>Claude</strong>
+          <span>Claude and Claude Desktop are current MCP Apps targets.</span>
+        </div>
+        <div class="platform">
+          <small>Native</small>
+          <strong>Developer tools</strong>
+          <span>VS Code GitHub Copilot, Goose, Postman, MCPJam, and Cursor-class clients.</span>
+        </div>
+        <div class="platform">
+          <small>Web shell</small>
+          <strong>WebHost</strong>
+          <span>A browser adapter for static sites, SSR, and public web apps.</span>
+        </div>
+        <div class="platform">
+          <small>Mobile shell</small>
+          <strong>iOS</strong>
+          <span>App screens and widgets backed by the same stream and catalog.</span>
+        </div>
+        <div class="platform">
+          <small>Desktop shell</small>
+          <strong>macOS</strong>
+          <span>A native window or menu-bar host with no product logic inside.</span>
+        </div>
+        <div class="platform">
+          <small>Desktop shell</small>
+          <strong>Windows</strong>
+          <span>A native host for task panes, dashboards, and assistant surfaces.</span>
+        </div>
+        <div class="platform">
+          <small>Future</small>
+          <strong>Endpoint binaries</strong>
+          <span>Compile or package backend endpoints when a native binary is the right deployment unit.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page section">
+    <h2>Clientless is the Electron moment for AI-native apps, without the heavy shell.</h2>
+    <p>
+      Electron and Tauri gave developers a way to bring web apps to many
+      platforms. Clientless aims higher: one backend-composed product surface,
+      portable across native MCP hosts, the web, mobile shells, desktop shells,
+      and static delivery.
+    </p>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Backend freedom</h3>
+        <p>Use TypeScript, Python, Go, Rust, workflows, services, or a monolith.</p>
+      </article>
+      <article class="card">
+        <h3>Thin hosts</h3>
+        <p>Hosts render, bridge actions, provide capability context, and stay small.</p>
+      </article>
+      <article class="card">
+        <h3>Shared product</h3>
+        <p>The same composition can become a chat app, web app, widget, or desktop view.</p>
+      </article>
+    </div>
+  </section>
+</Base>
+

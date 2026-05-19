@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (left, right) => right.data.pubDate.valueOf() - left.data.pubDate.valueOf(),
+);
+
+const dateFormat = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
+---
+
+<Base
+  title="Blog"
+  description="Essays on Clientless, json-render streams, MCP Apps, and backend-composed software."
+>
+  <section class="page">
+    <h1 class="display-title">Clientless Blog</h1>
+    <p class="lede">
+      Essays for the ideas that need room to breathe. The docs stay canonical;
+      the blog explains why this app model matters.
+    </p>
+    <div class="post-list">
+      {
+        posts.map((post) => (
+          <a class="post-card" href={`/blog/${post.id}/`}>
+            <time datetime={post.data.pubDate.toISOString()}>
+              {dateFormat.format(post.data.pubDate)}
+            </time>
+            <h2>{post.data.title}</h2>
+            <p>{post.data.description}</p>
+            <div class="tags">
+              {post.data.tags.map((tag) => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Base>
