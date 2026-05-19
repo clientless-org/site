@@ -5,6 +5,11 @@ import starlightThemeNext from "starlight-theme-next";
 export default defineConfig({
   site: "https://clientless.dev",
   output: "static",
+  vite: {
+    server: {
+      allowedHosts: ["jasons-mac-mini.local"],
+    },
+  },
   integrations: [
     starlight({
       title: "Clientless",
