@@ -78,11 +78,7 @@ a {
 }
 
 .brand-mark-curve {
-  fill: none;
-  stroke: var(--paper);
-  stroke-width: 15;
-  stroke-linecap: butt;
-  stroke-linejoin: round;
+  fill: var(--paper);
 }
 
 .nav-links {

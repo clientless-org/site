@@ -25,9 +25,16 @@ const pageTitle = `${title} | Clientless`;
         <nav class="nav" aria-label="Primary navigation">
           <a class="brand" href="/">
             <svg class="brand-mark" viewBox="0 0 128 128" aria-hidden="true">
+              <defs>
+                <mask id="brand-mark-c-cut">
+                  <rect width="128" height="128" fill="white"></rect>
+                  <ellipse cx="56" cy="68" rx="25" ry="35" fill="black"></ellipse>
+                  <rect x="72" y="49" width="42" height="38" fill="black"></rect>
+                </mask>
+              </defs>
               <rect width="128" height="128" rx="28"></rect>
               <path class="brand-mark-stem" d="M82 31h16v66H82z"></path>
-              <path class="brand-mark-curve" d="M92 47H78c-6-10-15-16-27-16-20 0-33 15-33 37s13 37 33 37c12 0 21-6 27-16h14"></path>
+              <ellipse class="brand-mark-curve" cx="56" cy="68" rx="43" ry="52" mask="url(#brand-mark-c-cut)"></ellipse>
             </svg>
             <span>Clientless</span>
           </a>
