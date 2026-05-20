@@ -9,7 +9,7 @@ const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" r
     </mask>
   </defs>
   <rect width="128" height="128" rx="28" fill="#101820"/>
-  <path d="M96 24h16v86H96z" fill="#32d296"/>
+  <path d="M84 24h16v86H84z" fill="#32d296"/>
   <circle cx="57" cy="67" r="43" fill="#f6f1e8" mask="url(#c-cut)"/>
 </svg>`;
 
