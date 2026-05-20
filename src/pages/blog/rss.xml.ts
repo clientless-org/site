@@ -10,7 +10,7 @@ function escapeXml(value: string) {
 }
 
 export async function GET({ site }: { site?: URL }) {
-  const baseUrl = site ?? new URL("https://clientless.dev");
+  const baseUrl = site ?? new URL("https://clientless.org");
   const posts = (await getCollection("blog")).sort(
     (left, right) => right.data.pubDate.valueOf() - left.data.pubDate.valueOf(),
   );

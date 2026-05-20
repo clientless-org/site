@@ -3,7 +3,7 @@ import { defineConfig } from "astro/config";
 import starlightThemeNext from "starlight-theme-next";
 
 export default defineConfig({
-  site: "https://clientless.dev",
+  site: "https://clientless.org",
   output: "static",
   vite: {
     server: {
