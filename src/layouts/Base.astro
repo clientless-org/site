@@ -31,9 +31,13 @@ const pageTitle = `${title} | Clientless`;
                   <circle cx="57" cy="67" r="25" fill="black"></circle>
                   <rect x="73" y="49" width="27" height="36" fill="black"></rect>
                 </mask>
+                <mask id="brand-mark-stem-cut">
+                  <rect width="128" height="128" fill="white"></rect>
+                  <circle cx="57" cy="67" r="25" fill="black"></circle>
+                </mask>
               </defs>
               <rect width="128" height="128" rx="28"></rect>
-              <path class="brand-mark-stem" d="M74 24h22v86H74z"></path>
+              <path class="brand-mark-stem" d="M74 24h22v86H74z" mask="url(#brand-mark-stem-cut)"></path>
               <circle class="brand-mark-curve" cx="57" cy="67" r="43" mask="url(#brand-mark-c-cut)"></circle>
             </svg>
             <span>Clientless</span>
