@@ -7,6 +7,6 @@
     </mask>
   </defs>
   <rect width="128" height="128" rx="28" fill="#101820"/>
-  <path d="M73 24h27v86H73z" fill="#32d296"/>
+  <path d="M74 24h22v86H74z" fill="#32d296"/>
   <circle cx="57" cy="67" r="43" fill="#f6f1e8" mask="url(#c-cut)"/>
 </svg>
