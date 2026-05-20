@@ -1,9 +1,9 @@
 ---
 title: Host Model
-description: Native MCP hosts, WebHost, and future Clientless platform shells.
+description: Native MCP hosts, WebHost, and future Clientless platform surfaces.
 ---
 
-A Clientless host renders the app contract. It should not contain the product.
+A Clientless host assembles and renders capabilities. It should not become a second fixed app.
 
 ## Native MCP App hosts
 
@@ -19,22 +19,22 @@ WebHost is the bridge for the ordinary web.
 
 It gives a browser page the host behavior that native MCP App clients already provide:
 
-- connect to the server,
-- load the app resource,
-- render the iframe or app surface,
+- connect to capabilities,
+- load app resources,
+- render interactive surfaces,
 - forward actions,
 - provide the web registry,
 - support SSR or static first paint where useful.
 
 ## iOS and widgets
 
-An iOS Clientless shell should be a native host adapter plus a native registry. Widgets can render constrained summaries or action surfaces from the same backend-composed spec, using a smaller catalog when needed.
+An iOS Clientless shell should be a native host adapter plus a native registry. Widgets can render constrained personal interfaces from the same capability stream, using a smaller catalog when needed.
 
 ## macOS and Windows
 
-Desktop shells should behave like Tauri or Electron in distribution shape, but not in product ownership. The shell can own native windows, menus, notifications, storage permissions, and system integrations. The backend still owns the app composition.
+Desktop shells should behave like surfaces for capabilities. They can own native windows, menus, notifications, storage permissions, and system integrations, while the capability model remains portable across hosts.
 
-## Endpoint binaries
+## Endpoint packages
 
-Compiling or packaging endpoints into native binaries is an implementation option, not a required part of the model. If tools such as Perryjs can package backend endpoints cleanly, they can become a deployment lane for local-first or desktop-hosted Clientless apps.
+Compiling or packaging endpoints into native binaries is an implementation option, not a required part of the model. If tools such as Perryjs can package endpoints cleanly, they can become a deployment lane for local-first or desktop-hosted Clientless capabilities.
 

@@ -11,17 +11,17 @@ tags:
 
 The DOM is an output target. React is a renderer strategy. Neither has to be the root boundary of the application.
 
-Clientless uses json-render as the app medium. A spec describes the interface, state bindings, and actions. A stream patches the spec over time. A registry maps each catalog entry to platform-native components.
+Clientless uses json-render as the interface medium. A spec describes interface pieces, state bindings, and actions. A stream patches the spec over time. A registry maps each catalog entry to platform-native components.
 
-That gives the backend a way to express product surface without choosing the final platform.
+That gives capabilities a way to express interface without choosing the final host.
 
-## Streaming matches the shape of modern work
+## Streaming matches the shape of intent
 
-Modern software rarely resolves all at once.
+Modern work rarely resolves all at once.
 
-A page might need database records, file previews, search results, model output, payment state, and permission checks. Some data is instant. Some is slow. Some is generated. Some depends on the user's previous action.
+A user might ask for a comparison, then need source data, file previews, model output, payment state, permissions, and an approval control. Some data is instant. Some is slow. Some is generated. Some depends on the previous choice.
 
-A UI stream lets the app surface appear progressively while the backend is still composing the result.
+A UI stream lets a personal interface appear progressively while the job clarifies.
 
 ## Registries preserve platform quality
 
@@ -29,5 +29,5 @@ Portable does not have to mean generic.
 
 The same catalog entry can render as a web component, a native mobile control, a desktop element, an email block, or a static image. The registry keeps the platform-specific craft in the right place.
 
-Clientless is not against frontend engineering. It asks frontend engineering to build excellent renderers and host shells instead of rebuilding the same product logic for every surface.
+Clientless is not against frontend engineering. It asks frontend engineering to build excellent renderers, registries, and hosts instead of rebuilding the same completed app for every surface.
 

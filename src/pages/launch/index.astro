@@ -4,83 +4,79 @@ import Base from "../../layouts/Base.astro";
 
 <Base
   title="Launch"
-  description="The Clientless launch page: backend-composed applications streamed through json-render to every host."
+  description="The Clientless launch page: apps decompose into capabilities and personal interfaces inside hosts."
 >
   <section class="page hero">
     <div>
-      <h1>The app no longer has to live in the client.</h1>
+      <h1>The app store era is ending.</h1>
       <p>
-        Clientless moves composition to the backend. Product logic, data,
-        tools, AI generation, and workflow state produce json-render streams.
-        Hosts become small, standardized renderers.
+        Clientless is a new way to build software after the fixed app
+        container. Developers publish capabilities. Users assemble personal
+        interfaces inside hosts like ChatGPT, Claude, the web, widgets, and
+        whatever comes next.
       </p>
       <div class="hero-actions">
         <a class="button" href="/docs/thesis/">Read the thesis</a>
-        <a class="button secondary" href="/blog/the-clientless-thesis/">Read the first essay</a>
+        <a class="button secondary" href="/blog/the-app-store-is-dead/">Read the provocation</a>
       </div>
     </div>
-    <div class="diagram-panel" aria-label="Clientless summary diagram">
-      <div class="system-stack">
-        <div class="node">
-          <strong>Backend composition</strong>
-          <span>Any language, any service shape, any tools, one UI contract.</span>
+    <div class="diagram-panel" aria-label="App store dissolution diagram">
+      <div class="dissolve-visual">
+        <div class="app-icons" aria-label="Traditional apps">
+          <span>CRM</span>
+          <span>HR</span>
+          <span>BI</span>
+          <span>PM</span>
         </div>
-        <div class="stream">
+        <div class="dissolve-stream">
           <div class="stream-line"></div>
-          <span>json-render stream</span>
+          <strong>decomposes into</strong>
         </div>
-        <div class="node host">
-          <strong>Every host</strong>
-          <span>OpenAI, Claude, WebHost, mobile, desktop, widgets, and more.</span>
+        <div class="capability-cloud" aria-label="Capabilities">
+          <span>search</span>
+          <span>approve</span>
+          <span>compare</span>
+          <span>forecast</span>
+          <span>summarize</span>
+          <span>configure</span>
         </div>
       </div>
     </div>
   </section>
 
   <section class="page section">
-    <h2>The new medium between frontend and backend is a stream.</h2>
+    <h2>The client disappears as the center of gravity.</h2>
     <p>
-      Instead of shipping one large client application that owns routing,
-      rendering, data fetching, and workflow composition, the backend emits a
-      structured UI stream. The host renders that stream with the right
-      registry for the surface.
+      The old model packaged work into apps: install the CRM, open the
+      dashboard, navigate the product, learn its workflows. Clientless breaks
+      that container apart. The useful pieces become capabilities that a host
+      can call, combine, and render when the user needs them.
     </p>
     <div class="diagram-panel">
-      <div class="system-map">
-        <div class="system-stack">
-          <div class="node">
-            <strong>Data and state</strong>
-            <span>Databases, files, auth, sessions, queues, and domain models.</span>
-          </div>
-          <div class="node">
-            <strong>Tools and AI</strong>
-            <span>MCP tools, agents, model calls, search, and external services.</span>
-          </div>
-          <div class="node">
-            <strong>Product composer</strong>
-            <span>Monolith, services, workflows, or endpoint binaries.</span>
+      <div class="capability-composition">
+        <div class="composition-column">
+          <h3>Developers publish capabilities</h3>
+          <div class="capability-list">
+            <span>Retrieve account history</span>
+            <span>Model a budget change</span>
+            <span>Approve a request</span>
+            <span>Generate a scenario</span>
           </div>
         </div>
-        <div class="stream">
-          <div class="stream-line"></div>
-          <span>SpecStream</span>
+        <div class="intent-card">
+          <strong>User intent</strong>
+          <p>"Help me decide, then make the change."</p>
         </div>
-        <div class="host-grid">
-          <div class="node host">
-            <strong>Native MCP hosts</strong>
-            <span>Conversation and IDE hosts that render MCP Apps inline.</span>
-          </div>
-          <div class="node host">
-            <strong>WebHost</strong>
-            <span>A browser shell for non-native web delivery.</span>
-          </div>
-          <div class="node host alt">
-            <strong>Mobile shells</strong>
-            <span>iOS apps, widgets, and future React Native registries.</span>
-          </div>
-          <div class="node host alt">
-            <strong>Desktop shells</strong>
-            <span>macOS and Windows shells without app logic inside them.</span>
+        <div class="composition-column">
+          <h3>Hosts assemble personal interfaces</h3>
+          <div class="interface-preview">
+            <div class="preview-row wide"></div>
+            <div class="preview-row"></div>
+            <div class="preview-grid">
+              <span></span>
+              <span></span>
+            </div>
+            <button>Approve</button>
           </div>
         </div>
       </div>
@@ -88,25 +84,68 @@ import Base from "../../layouts/Base.astro";
   </section>
 
   <section class="page section">
-    <h2>The protocol stack becomes the product boundary.</h2>
+    <h2>Personal interfaces replace one-size-fits-all apps.</h2>
     <p>
-      Clientless does not eliminate frontend code. It changes where the product
-      is composed. React, Swift, native widgets, and web components can still
-      exist inside renderers and host shells, but the app contract is json.
+      A personal interface can be created in a chat, saved for later, pinned
+      like a widget, embedded in a workspace, or recalled when the same job
+      returns. It is not a separate destination. It is the right interface for
+      the current intent.
+    </p>
+    <div class="diagram-panel">
+      <div class="lifecycle-visual" aria-label="Personal interface lifecycle">
+        <div class="life-step">
+          <span>01</span>
+          <strong>Ask</strong>
+          <p>The user states a goal inside a host.</p>
+        </div>
+        <div class="life-step">
+          <span>02</span>
+          <strong>Assemble</strong>
+          <p>The host combines relevant capabilities.</p>
+        </div>
+        <div class="life-step">
+          <span>03</span>
+          <strong>Interact</strong>
+          <p>The interface appears inline with real controls.</p>
+        </div>
+        <div class="life-step">
+          <span>04</span>
+          <strong>Save</strong>
+          <p>The interface becomes reusable when useful.</p>
+        </div>
+        <div class="life-step">
+          <span>05</span>
+          <strong>Recall</strong>
+          <p>The user calls it again without reinstalling anything.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page section">
+    <h2>The protocol stack supports composition, not destinations.</h2>
+    <p>
+      MCP Apps and json-render are the technical path, but they are not the
+      headline. The headline is that software moves from completed products to
+      callable capabilities that hosts can turn into interfaces on demand.
     </p>
     <div class="diagram-panel">
       <div class="stack-visual">
         <div class="layer">
-          <b>Surface</b>
-          <span>Chat, browser, IDE, mobile widget, desktop panel, static site.</span>
+          <b>User intent</b>
+          <span>Ask, decide, compare, approve, explore, configure, monitor.</span>
         </div>
         <div class="layer">
-          <b>Host adapter</b>
-          <span>Native MCP Apps support, WebHost, or a thin platform shell.</span>
+          <b>Host</b>
+          <span>ChatGPT, Claude, web, IDE, mobile widget, desktop panel.</span>
+        </div>
+        <div class="layer">
+          <b>Personal interface</b>
+          <span>A generated, reusable surface assembled for the current job.</span>
         </div>
         <div class="layer">
           <b>Renderer registry</b>
-          <span>Maps the shared catalog to platform components and actions.</span>
+          <span>Maps shared interface parts to the current platform.</span>
         </div>
         <div class="layer">
           <b>json-render</b>
@@ -114,91 +153,86 @@ import Base from "../../layouts/Base.astro";
         </div>
         <div class="layer">
           <b>MCP Apps</b>
-          <span>Standard app resources, iframe bridge, and tool-call mediation.</span>
-        </div>
-        <div class="layer">
-          <b>Backend</b>
-          <span>Business logic, data, tools, AI, auth, and workflow composition.</span>
+          <span>Standard resources, host bridge, capabilities, and actions.</span>
         </div>
       </div>
     </div>
   </section>
 
   <section class="page section">
-    <h2>One app model, many host categories.</h2>
+    <h2>Every surface becomes a host for capabilities.</h2>
     <p>
-      Native MCP hosts can render the app directly. Non-native targets only
-      need a shell that understands the same contract. The shell should be
-      boring; the product stays upstream.
+      Native MCP hosts can render interactive UI inline. Non-native targets can
+      become hosts with a small adapter. The important shift is not the shell;
+      it is the death of the app as the only unit of software.
     </p>
     <div class="diagram-panel">
       <div class="platform-matrix">
         <div class="platform">
-          <small>Native</small>
+          <small>Host</small>
           <strong>OpenAI</strong>
-          <span>ChatGPT Apps SDK is built on MCP and is a primary host target.</span>
+          <span>ChatGPT Apps SDK brings interactive capability surfaces into ChatGPT.</span>
         </div>
         <div class="platform">
-          <small>Native</small>
+          <small>Host</small>
           <strong>Claude</strong>
           <span>Claude and Claude Desktop are current MCP Apps targets.</span>
         </div>
         <div class="platform">
-          <small>Native</small>
+          <small>Host</small>
           <strong>Developer tools</strong>
           <span>VS Code GitHub Copilot, Goose, Postman, MCPJam, and Cursor-class clients.</span>
         </div>
         <div class="platform">
-          <small>Web shell</small>
+          <small>Web</small>
           <strong>WebHost</strong>
-          <span>A browser adapter for static sites, SSR, and public web apps.</span>
+          <span>A browser adapter for public sites, documentation, and reusable interfaces.</span>
         </div>
         <div class="platform">
-          <small>Mobile shell</small>
+          <small>Mobile</small>
           <strong>iOS</strong>
-          <span>App screens and widgets backed by the same stream and catalog.</span>
+          <span>Personal interfaces can appear as app screens, sheets, or widgets.</span>
         </div>
         <div class="platform">
-          <small>Desktop shell</small>
+          <small>Desktop</small>
           <strong>macOS</strong>
-          <span>A native window or menu-bar host with no product logic inside.</span>
+          <span>Capabilities can surface as command panes, menu views, or saved tools.</span>
         </div>
         <div class="platform">
-          <small>Desktop shell</small>
+          <small>Desktop</small>
           <strong>Windows</strong>
-          <span>A native host for task panes, dashboards, and assistant surfaces.</span>
+          <span>Task panes and assistant surfaces become capability hosts.</span>
         </div>
         <div class="platform">
           <small>Future</small>
-          <strong>Endpoint binaries</strong>
-          <span>Compile or package backend endpoints when a native binary is the right deployment unit.</span>
+          <strong>Endpoint packages</strong>
+          <span>Local deployment can package capability endpoints when that is useful.</span>
         </div>
       </div>
     </div>
   </section>
 
   <section class="page section">
-    <h2>Clientless is the Electron moment for AI-native apps, without the heavy shell.</h2>
+    <h2>Developers stop shipping completed destinations.</h2>
     <p>
-      Electron and Tauri gave developers a way to bring web apps to many
-      platforms. Clientless aims higher: one backend-composed product surface,
-      portable across native MCP hosts, the web, mobile shells, desktop shells,
-      and static delivery.
+      The developer role changes from building finished apps to publishing the
+      capabilities users can compose. The product becomes a set of trusted
+      actions, views, models, and rules that hosts can assemble into personal
+      interfaces.
     </p>
     <div class="card-grid">
       <article class="card">
-        <h3>Backend freedom</h3>
-        <p>Use TypeScript, Python, Go, Rust, workflows, services, or a monolith.</p>
+        <h3>Capabilities</h3>
+        <p>Expose the useful parts of your product as callable, renderable building blocks.</p>
       </article>
       <article class="card">
-        <h3>Thin hosts</h3>
-        <p>Hosts render, bridge actions, provide capability context, and stay small.</p>
+        <h3>Personal interfaces</h3>
+        <p>Let users assemble, save, and recall the exact interface their work needs.</p>
       </article>
       <article class="card">
-        <h3>Shared product</h3>
-        <p>The same composition can become a chat app, web app, widget, or desktop view.</p>
+        <h3>Hosts everywhere</h3>
+        <p>Meet users inside chats, browsers, widgets, desktops, IDEs, and future surfaces.</p>
       </article>
     </div>
   </section>
 </Base>
-

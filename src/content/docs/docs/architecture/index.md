@@ -1,14 +1,14 @@
 ---
 title: Architecture
-description: The Clientless stack from backend composition to host-rendered UI.
+description: The Clientless stack from capabilities to personal interfaces.
 ---
 
-Clientless has one architectural boundary: the backend emits a UI stream, and hosts render it.
+Clientless has one architectural boundary: capabilities describe what can be done, and hosts assemble those capabilities into personal interfaces.
 
 ```text
-data + tools + AI + workflow state
+developer capabilities
         ↓
-backend composer
+action, data, permission, and view contracts
         ↓
 json-render spec or stream
         ↓
@@ -16,42 +16,47 @@ MCP Apps resource + host bridge
         ↓
 registry-backed renderer
         ↓
-web, chat, IDE, mobile, desktop, widget, static site
+personal interface in chat, web, mobile, desktop, widget, or static output
 ```
 
-## Backend composer
+## Capabilities
 
-The backend composer is intentionally flexible. It can be:
+A capability is a useful part of a product exposed as something a host can call and render.
 
-- a monolith,
-- a set of microservices,
-- a workflow engine,
-- an agent runtime,
-- a serverless endpoint,
-- a compiled endpoint binary if that packaging model becomes useful.
+It can include:
 
-The architecture choice stays behind the contract. The host does not need to know whether the spec came from TypeScript, Python, Go, Rust, a queue, a model call, or a workflow.
+- actions,
+- data queries,
+- generated views,
+- decision support,
+- approval flows,
+- validation rules,
+- long-running tasks,
+- saved interface state.
 
-## UI contract
+Capabilities can be implemented with any service architecture. That implementation detail stays behind the contract.
 
-The UI contract is json-render.
+## Interface contract
 
-A spec describes components, props, state bindings, visibility, and actions. A stream progressively patches that spec so the interface can appear while the backend is still composing it.
+The interface contract is json-render.
+
+A spec describes components, props, state bindings, visibility, and actions. A stream progressively patches that spec so a personal interface can appear while data, tools, and model output resolve.
 
 ## MCP Apps boundary
 
-MCP Apps provides the standardized application resource model. An MCP server can return interactive UI, and a host can render it in a controlled environment while mediating calls back to the server.
+MCP Apps provides the standardized application resource model. A capability can return interactive UI, and a host can render it in a controlled environment while mediating calls safely.
 
-## Host adapters
+## Hosts
 
-Host adapters are deliberately small. They provide:
+Hosts assemble and render capabilities. They provide:
 
 - transport,
 - resource loading,
 - sandboxing and security policy,
 - platform context,
 - action forwarding,
-- a component registry for the target surface.
+- a component registry for the target surface,
+- save and recall behavior for personal interfaces.
 
-The more logic that moves into the host, the less Clientless the system becomes.
+The more a host can assemble safely, the less users need fixed applications as destinations.
 

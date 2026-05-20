@@ -31,7 +31,7 @@ export async function GET({ site }: { site?: URL }) {
 <rss version="2.0">
 <channel>
   <title>Clientless Blog</title>
-  <description>Essays on backend-composed applications and json-render streams.</description>
+  <description>Essays on capabilities, personal interfaces, and the end of fixed app containers.</description>
   <link>${new URL("/blog/", baseUrl).toString()}</link>
   ${items}
 </channel>
@@ -41,4 +41,3 @@ export async function GET({ site }: { site?: URL }) {
     },
   });
 }
-

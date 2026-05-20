@@ -3,24 +3,26 @@ title: Clientless Docs
 description: The canonical source of truth for the Clientless application model.
 ---
 
-Clientless is an application architecture where the backend composes the product surface and streams UI as data.
+Clientless is a way to build software after the fixed client stops being the center of the app.
 
-The client is no longer the place where the whole app is implemented. The client becomes a host: it renders a validated interface stream, provides platform capabilities, and sends actions back to the backend.
+Instead of shipping one completed destination for every job, developers publish capabilities: trusted actions, views, tools, rules, and interface parts that hosts can assemble. Users call those capabilities inside the surface they already use and turn them into personal interfaces when they need something reusable.
 
 ## Core definition
 
-A Clientless app has four parts:
+A Clientless system has four parts:
 
-- A backend composer that owns product logic, data access, tools, AI calls, and workflow state.
-- A json-render contract that describes UI as specs and progressive streams.
-- An MCP Apps boundary that lets hosts load interactive app resources and mediate tool calls.
-- Host adapters that render the same app in native MCP hosts, web pages, mobile shells, desktop shells, widgets, and static surfaces.
+- Capabilities that expose what a product can do.
+- A json-render contract that lets capabilities describe interactive interface pieces as specs and streams.
+- An MCP Apps boundary that lets hosts render those pieces inline and mediate actions safely.
+- Hosts that assemble, render, save, and recall personal interfaces across chat, web, mobile, desktop, widgets, and static surfaces.
+
+The old app model asks users to find and operate a fixed application. Clientless lets the interface appear around the user's intent.
 
 ## Canonical pages
 
 - [The Thesis](/docs/thesis/) explains the platform argument.
-- [Architecture](/docs/architecture/) defines the stack.
-- [json-render Streams](/docs/architecture/json-render-streams/) explains the new medium.
+- [Architecture](/docs/architecture/) defines the capability-to-interface stack.
+- [json-render Streams](/docs/architecture/json-render-streams/) explains the interface medium.
 - [Host Model](/docs/hosts/) describes native and non-native host targets.
 - [Static Sites](/docs/static-sites/) explains how this also applies to traditional web publishing.
 

@@ -14,7 +14,7 @@ export default defineConfig({
     starlight({
       title: "Clientless",
       description:
-        "A new application architecture where backend composition streams portable UI to every host.",
+        "A new way to build apps where capabilities assemble into personal interfaces inside any host.",
       favicon: "/favicon.svg",
       plugins: [starlightThemeNext()],
       logo: {

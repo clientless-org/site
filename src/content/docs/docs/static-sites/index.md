@@ -5,11 +5,11 @@ description: How Clientless applies to traditional static websites.
 
 Clientless can also describe static sites.
 
-A traditional static page is a precomputed interface. A Clientless static page is a precomputed json-render result, rendered at build time or served as a static app resource.
+A traditional static page is a precomputed interface. A Clientless static page is a saved personal interface or capability result, rendered at build time or served as a static app resource.
 
 ## Static does not mean handwritten
 
-The same backend composition model can produce:
+The same capability model can produce:
 
 - a marketing page,
 - documentation,
@@ -22,7 +22,7 @@ The output can be frozen into static HTML, streamed at request time, or opened i
 
 ## Why this matters
 
-Static delivery gives Clientless a low-friction adoption path. Developers do not need to start with a fully dynamic app. They can begin by using the backend composer and json-render catalog to generate stable pages, then make selected surfaces interactive later.
+Static delivery gives Clientless a low-friction adoption path. Developers do not need to start with a fully dynamic host. They can publish capabilities that generate stable pages, then make selected surfaces interactive later.
 
 ## Relationship to the DOM
 
