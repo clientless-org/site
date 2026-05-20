@@ -63,15 +63,10 @@ a {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
   width: 34px;
   height: 34px;
-  border-radius: 8px;
-  background: var(--ink);
-  color: var(--paper);
-  font-size: 18px;
-  line-height: 1;
+  display: block;
+  flex: 0 0 auto;
 }
 
 .nav-links {
