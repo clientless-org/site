@@ -13,8 +13,10 @@ const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" r
     </mask>
   </defs>
   <rect width="128" height="128" rx="28" fill="#101820"/>
-  <path d="M74 24h22v86H74z" fill="#32d296" mask="url(#stem-cut)"/>
-  <circle cx="57" cy="67" r="43" fill="#f6f1e8" mask="url(#c-cut)"/>
+  <g transform="translate(7 -3)">
+    <path d="M74 24h22v86H74z" fill="#32d296" opacity="0.62" mask="url(#stem-cut)"/>
+    <circle cx="57" cy="67" r="43" fill="#f6f1e8" mask="url(#c-cut)"/>
+  </g>
 </svg>`;
 
 export function GET() {
