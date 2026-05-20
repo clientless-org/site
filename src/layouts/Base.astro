@@ -17,6 +17,12 @@ const pageTitle = `${title} | Clientless`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>{pageTitle}</title>
   </head>
   <body>
@@ -24,7 +30,11 @@ const pageTitle = `${title} | Clientless`;
       <header class="site-header">
         <nav class="nav" aria-label="Primary navigation">
           <a class="brand" href="/">
-            <img class="brand-mark" src="/logo-mark.svg" alt="" aria-hidden="true" />
+            <svg class="brand-mark" viewBox="0 0 128 128" aria-hidden="true">
+              <rect width="128" height="128" rx="28"></rect>
+              <text x="64" y="64" text-anchor="middle" dominant-baseline="middle">a</text>
+              <text x="64" y="64" text-anchor="middle" dominant-baseline="middle">c</text>
+            </svg>
             <span>Clientless</span>
           </a>
           <div class="nav-links">
