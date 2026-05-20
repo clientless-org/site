@@ -73,19 +73,16 @@ a {
   fill: var(--ink);
 }
 
-.brand-mark text {
-  font-family: "Montserrat Alternates", Arial, Helvetica, sans-serif;
-  font-size: 86px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.brand-mark text:first-of-type {
+.brand-mark-stem {
   fill: var(--mint);
 }
 
-.brand-mark text:last-of-type {
-  fill: var(--paper);
+.brand-mark-curve {
+  fill: none;
+  stroke: var(--paper);
+  stroke-width: 15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .nav-links {
