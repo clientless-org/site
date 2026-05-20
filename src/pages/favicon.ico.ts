@@ -4,13 +4,13 @@ const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" r
   <defs>
     <mask id="c-cut">
       <rect width="128" height="128" fill="white"/>
-      <ellipse cx="56" cy="68" rx="25" ry="35" fill="black"/>
-      <rect x="72" y="49" width="42" height="38" fill="black"/>
+      <circle cx="57" cy="67" r="25" fill="black"/>
+      <rect x="73" y="49" width="39" height="36" fill="black"/>
     </mask>
   </defs>
   <rect width="128" height="128" rx="28" fill="#101820"/>
-  <path d="M82 31h16v66H82z" fill="#32d296"/>
-  <ellipse cx="56" cy="68" rx="43" ry="52" fill="#f6f1e8" mask="url(#c-cut)"/>
+  <path d="M96 24h16v86H96z" fill="#32d296"/>
+  <circle cx="57" cy="67" r="43" fill="#f6f1e8" mask="url(#c-cut)"/>
 </svg>`;
 
 export function GET() {
