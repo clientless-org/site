@@ -3,10 +3,10 @@
     <mask id="c-cut">
       <rect width="128" height="128" fill="white"/>
       <circle cx="57" cy="67" r="25" fill="black"/>
-      <rect x="73" y="49" width="39" height="36" fill="black"/>
+      <rect x="73" y="49" width="27" height="36" fill="black"/>
     </mask>
   </defs>
   <rect width="128" height="128" rx="28" fill="#101820"/>
-  <path d="M84 24h16v86H84z" fill="#32d296"/>
+  <path d="M73 24h27v86H73z" fill="#32d296"/>
   <circle cx="57" cy="67" r="43" fill="#f6f1e8" mask="url(#c-cut)"/>
 </svg>
