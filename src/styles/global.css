@@ -70,15 +70,15 @@ a {
 }
 
 .brand-mark rect {
-  fill: var(--ink);
+  fill: #101820;
 }
 
 .brand-mark-stem {
-  fill: var(--mint);
+  fill: #32d296;
 }
 
 .brand-mark-curve {
-  fill: var(--paper);
+  fill: #f6f1e8;
 }
 
 .nav-links {
