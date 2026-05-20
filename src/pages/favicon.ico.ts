@@ -5,7 +5,7 @@ const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" r
     <mask id="c-cut">
       <rect width="128" height="128" fill="white"/>
       <circle cx="57" cy="67" r="25" fill="black"/>
-      <rect x="82" y="49" width="18" height="36" fill="black"/>
+      <rect x="82" y="49" width="46" height="36" fill="black"/>
     </mask>
   </defs>
   <rect width="128" height="128" rx="28" fill="#101820"/>
