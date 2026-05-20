@@ -69,18 +69,6 @@ a {
   flex: 0 0 auto;
 }
 
-.brand-mark rect {
-  fill: #101820;
-}
-
-.brand-mark-stem {
-  fill: #32d296;
-}
-
-.brand-mark-curve {
-  fill: #f6f1e8;
-}
-
 .nav-links {
   display: flex;
   align-items: center;
